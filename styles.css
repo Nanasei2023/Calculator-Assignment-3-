@@ -1,0 +1,119 @@
+/* The main body of CSS file styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+/* Calculator mainfram styling to suite design guide position */
+.calculator {
+    background-color: #242530;
+    padding: 20px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
+    width: 300px;
+}
+
+/* The display area styling for current inputs and results */
+.display {
+    background-color: #3A3F77;
+    color: white;
+    font-size: 24px;
+    text-align: right;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    min-height: 40px;
+    overflow-x: auto;
+}
+
+/* The display area styling for historical inputs and results */
+.history {
+    color: #ccc;
+    font-size: 14px;
+    text-align: left;
+    margin-bottom: 10px;
+    min-height: 20px;
+}
+
+/* Grid consisting of all buttons is divided into individual cells as buttons*/
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+/* General effects for all button tags */
+button {
+    background-color: #4a4a64;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+/* Digits 0-9 button background color styling */
+.digit {
+    background-color: #4a4a64;
+}
+
+/* Button background color styling for operations; +, -, ×, and ÷.  */
+.operator {
+    background-color: #F49D1A;
+}
+
+/* The backspace button operation on calculator background color effect  */
+.backarrow {
+    background-color: #F49D1A;
+}
+
+/* The clear button operation on calculator styling */
+.clear {
+    background-color: #e76f51;
+    grid-column: span 2;
+}
+
+/* The equals button operation on calculator styling */
+.equals {
+    background-color: #a8a8a8;
+    grid-column: span 2;
+    -webkit-text-fill-color: #000000;
+}
+
+/* Hover effects for various buttons */
+button:hover {
+    background-color: #5a5a78;
+}
+
+.operator:hover {
+    background-color: #f5b983;
+}
+
+.backarrow:hover {
+     background-color: #f5b983;
+}
+
+.clear:hover {
+    background-color: #ef835e;
+}
+
+.equals:hover {
+    background-color: #b8b8b8;
+}
+
+/* Responsive layout styling  */
+@media (max-width: 320px) {
+    .calculator {
+        width: 90%;
+    }
+    button {
+        padding: 10px;
+        font-size: 16px;
+    }
+}
